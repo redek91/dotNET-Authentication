@@ -40,7 +40,7 @@ namespace Basics.Controllers
             var licenseIdentity = new ClaimsIdentity(licenseClaims, "Government");
 
             // Define the principal of the entity
-            var userPrincipal = new ClaimsPrincipal(new [] { grandmaIdentity, licenseIdentity });
+            var userPrincipal = new ClaimsPrincipal(new[] { grandmaIdentity, licenseIdentity });
 
             //Set the principal to the context
             HttpContext.SignInAsync(userPrincipal);
